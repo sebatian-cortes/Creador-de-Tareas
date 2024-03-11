@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 import './App.css';
+let n=0
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -38,9 +39,16 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Archivador de tareas</h1>
+      <div className="task-input">
+        <input ref={taskNameRef} type="text" placeholder="Tarea" />
+        <textarea ref={taskDescriptionRef} placeholder="Descripcion"></textarea>
+        <button onClick={createTask}>Crear Tarea</button>
+      </div>
+      <hr />
       <div className="tasks-container">
         <div className="task-box">
-          <h2>Tareas Pendientes</h2>
+          <h2>Tareas Activas</h2>
           {tasks.map(task => (
             !task.archived &&
             <div key={task.id} className="task">
@@ -50,24 +58,21 @@ function App() {
             </div>
           ))}
         </div>
-        <div className="archive-box">
-          <h2>Tareas Archivadas</h2>
+        {/* <div className="archive-box">
+          <h2>Tareas Inactivas</h2>
           {archivedTasks.map(task => (
             <div key={task.id} className="task">
               <h3>{task.name}</h3>
               <p>{task.description}</p>
+              
             </div>
           ))}
           {archivedTasks.length > 0 && (
             <button onClick={clearArchivedTasks}>Borrar Tareas Archivadas</button>
           )}
-        </div>
+        </div> */}
       </div>
-      <div className="task-input">
-        <input ref={taskNameRef} type="text" placeholder="Tarea" />
-        <textarea ref={taskDescriptionRef} placeholder="Descripcion"></textarea>
-        <button onClick={createTask}>Crear Tarea</button>
-      </div>
+      
     </div>
   );
 }
