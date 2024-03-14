@@ -1,0 +1,9 @@
+ul{
+    width: 70%;
+    background-color: rgb(72, 23, 118);
+    border-radius: 20px;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+
+}

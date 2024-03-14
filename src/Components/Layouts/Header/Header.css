@@ -1,0 +1,25 @@
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   justify-content: space-evenly;
+    width: 100vw;
+    height: 10%;
+    background-color: #a477ff;
+}
+
+header img{
+    width: 18vh;
+    height: 18vh;
+
+}
+header h1{
+    width: 70%;
+}
+
+header div{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
