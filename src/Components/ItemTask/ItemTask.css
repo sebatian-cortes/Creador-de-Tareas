@@ -8,12 +8,44 @@
     margin-top: 5vh;
     font-size: 3.5vh;
     text-align: center;
+    text-decoration: none;
 }
 
-li::marker{
-    color: green;
-    font-size: 5vh;
-    text-align: center;
-    border: 4px solid orange;
-
+.item input{
+    width: 60px;
+    height: 20px;
+    background-color: aqua;
 }
+
+.green{
+    background-color: rgb(13, 180, 13);
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+}
+
+.line{
+    text-decoration: line-through;
+}
+
+.orange{
+    background-color: rgb(255, 102, 0);
+    width: 15px;
+    height: 15px;
+    border-radius: 50px;
+  
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 3%;
+    width: 70%;
+}
+
+span{
+    margin-right: 20%;
+}
+
+
